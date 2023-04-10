@@ -1,13 +1,14 @@
-Shader "Custom/BaseShader"
+﻿Shader "Custom/StencilTexture"
 {
     Properties
     {
         _BaseColor("Base Color", color) = (1,1,1,1)
         _BaseTex("Base Texture", 2D) = "white" {}
+        [IntRange] _StencilRef("Stencil Ref", Range(0, 255)) = 1
     }
     
     SubShader
-    {
+    {        
         Tags
         {
             "RenderType" = "Opaque"
@@ -17,6 +18,14 @@ Shader "Custom/BaseShader"
         
         Pass
         {
+            Stencil
+            {
+                Ref[_StencilRef]
+                Comp Equal
+                Pass Keep
+                Fail Keep
+            }
+            
             Tags { "LightMode" = "UniversalForward" }
             
             HLSLPROGRAM

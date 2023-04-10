@@ -7,23 +7,26 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_SceneIntersection
-  m_Shader: {fileID: 4800000, guid: 43467e9d822e45be9982a0e913c4aba0, type: 3}
+  m_Name: Custom_Xray
+  m_Shader: {fileID: 4800000, guid: 7c1f9bfe5c2444bc9904b1cc45aa01ca, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _IntersectPower: 8
+    m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.037424356, g: 0.047402404, b: 0.2735849, a: 1}
-    - _IntersectColor: {r: 1, g: 0.23137254, b: 0.78189313, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _XrayColor: {r: 0.3820755, g: 0.83280075, b: 1, a: 1}
   m_BuildTextureStacks: []
