@@ -12,7 +12,6 @@ Shader "Custom/DepthOnly" //Unclear
             "Queue" = "Geometry"
             "RenderPipeline" = "UniversalPipeline"
         }
-        //UsePass "Standard/SHADOWCASTER"
         UsePass "Universal Render Pipeline/Unlit/DepthOnly"
 //        Pass
 //        {
