@@ -54,7 +54,7 @@
                 float4 textureSample = tex2D(_MainTex, i.uv);
                 float3 outputColor = Luminance(textureSample);
                 //return textureSample;
-                return lerp(textureSample, float4(outputColor, 1.0f), _Strength);
+                return lerp(textureSample, float4(outputColor, 1.0f), 1);
             }
             
             ENDHLSL

@@ -17,46 +17,6 @@ MonoBehaviour:
   strength:
     m_OverrideState: 1
     m_Value: 0.597
---- !u!114 &-8260582822633616621
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 0
-  redOutRedIn:
-    m_OverrideState: 0
-    m_Value: 100
-  redOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 0
-  redOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 0
-  greenOutRedIn:
-    m_OverrideState: 0
-    m_Value: 0
-  greenOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 100
-  greenOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 0
-  blueOutRedIn:
-    m_OverrideState: 1
-    m_Value: 200
-  blueOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 200
-  blueOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 200
 --- !u!114 &-7940625015680988559
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -69,7 +29,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d073562aa9954a58a5ebbc9ba7b2e15e, type: 3}
   m_Name: GaussianBlurSettings
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
+  <displayName>k__BackingField: 
   kernelSize:
     m_OverrideState: 1
     m_Value: 8
@@ -86,6 +47,7 @@ MonoBehaviour:
   m_Name: GrayscaleSettings
   m_EditorClassIdentifier: Assembly-CSharp:Chapter_11:GrayscaleSettings
   active: 0
+  <displayName>k__BackingField: 
   strength:
     m_OverrideState: 1
     m_Value: 1
@@ -102,6 +64,20 @@ MonoBehaviour:
   m_Name: Box Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -7654444583688254528}
-  - {fileID: -8260582822633616621}
-  - {fileID: -7940625015680988559}
+  - {fileID: 8315533396769451122}
+--- !u!114 &8315533396769451122
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff5de4b2c164413b45edcb3f73def57, type: 3}
+  m_Name: CustomEffectComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.128

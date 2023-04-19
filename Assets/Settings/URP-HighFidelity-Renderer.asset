@@ -78,6 +78,21 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &-2957262352581932045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c6abd016207434abecf38c7e15f133, type: 3}
+  m_Name: CustomRenderPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  material: {fileID: 2100000, guid: dd70afa31e6c0ea478bca9879e0c64b2, type: 2}
+  renderPassEvent: 550
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +132,7 @@ MonoBehaviour:
   settings:
     IsEnabled: 1
     WhenToInsert: 550
-    MaterialToBlit: {fileID: 2100000, guid: 81a7b3fb99e984cb0a7a85e94d32a98e, type: 2}
+    MaterialToBlit: {fileID: 2100000, guid: dd70afa31e6c0ea478bca9879e0c64b2, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,10 +154,8 @@ MonoBehaviour:
   - {fileID: -6334642781161007499}
   - {fileID: 2201432755299598041}
   - {fileID: -9074929002364276315}
-  - {fileID: 8132874405477813620}
-  - {fileID: -760628514397496275}
-  - {fileID: 8001289552195926455}
-  m_RendererFeatureMap: adc0de57c6d2eee5c9bb52dbbb24e50d75d6e7f1f3d316a8d9be8a606d0f8d1ea5f12f4427600f82740d5f952ec6dd702ddc4d6965b471f5b7b9ae7f744a0a6f
+  - {fileID: -2957262352581932045}
+  m_RendererFeatureMap: adc0de57c6d2eee5c9bb52dbbb24e50d75d6e7f1f3d316a8d9be8a606d0f8d1ea5f12f4427600f82f3cbb7fe8eb1f5d6
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -273,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533dbcc49f9d442986b000fd8acfc1ad, type: 3}
   m_Name: Gaussian Blur
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
 --- !u!114 &8132874405477813620
 MonoBehaviour:
   m_ObjectHideFlags: 0
