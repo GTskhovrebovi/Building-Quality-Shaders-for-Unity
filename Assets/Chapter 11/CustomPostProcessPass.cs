@@ -7,10 +7,10 @@ namespace Chapter_11
     [System.Serializable]
     public class CustomPostProcessPass : ScriptableRenderPass
     {
-        RenderTargetIdentifier source;
-        RenderTargetIdentifier tempTex;
+        RenderTargetIdentifier _source;
+        RenderTargetIdentifier _tempTex;
         private Material _material;
-        private string profilerTag;
+        private string _profilerTag;
 
         private int _tempTexID = Shader.PropertyToID("_TempTex");
     
@@ -22,9 +22,9 @@ namespace Chapter_11
     
         public void Setup(ScriptableRenderer renderer, string profilerTag)
         {
-            this.profilerTag = profilerTag;
-            source = renderer.cameraColorTarget;
-            VolumeStack stack = VolumeManager.instance.stack;
+            _profilerTag = profilerTag;
+            _source = renderer.cameraColorTarget;
+            var stack = VolumeManager.instance.stack;
             CustomEffectComponent customEffectComponent = stack.GetComponent<CustomEffectComponent>();
             //renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
             if (customEffectComponent != null && customEffectComponent.IsActive())
@@ -40,27 +40,27 @@ namespace Chapter_11
             descriptor.depthBufferBits = 0;
 
             var renderer = renderingData.cameraData.renderer;
-            source = renderer.cameraColorTarget;
+            _source = renderer.cameraColorTarget;
 
             // Create a temporary render texture using the descriptor from above.
-            tempTex = new RenderTargetIdentifier(_tempTexID);
+            _tempTex = new RenderTargetIdentifier(_tempTexID);
             cmd.GetTemporaryRT(_tempTexID , descriptor, FilterMode.Bilinear);
         }
     
         // The actual execution of the pass. This is where custom rendering occurs.
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
-            CommandBuffer cmd = CommandBufferPool.Get(profilerTag);
+            CommandBuffer cmd = CommandBufferPool.Get(_profilerTag);
             cmd.Clear();
 
             var stack = VolumeManager.instance.stack;
             var customEffect = stack.GetComponent<CustomEffectComponent>();
             if (customEffect.IsActive())
             {
-                Blit(cmd, source, tempTex, _material, 0);
+                Blit(cmd, _source, _tempTex, _material, 0);
             }
 
-            Blit(cmd, tempTex, source);
+            Blit(cmd, _tempTex, _source);
         
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);

@@ -65,6 +65,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 8315533396769451122}
+  - {fileID: 3657826630879316924}
+--- !u!114 &3657826630879316924
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086423f5ee1b4d538aa19facc1eabe42, type: 3}
+  m_Name: WorldScanVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    m_OverrideState: 1
+    m_Value: 1
+  scanOrigin:
+    m_OverrideState: 1
+    m_Value: {x: 0, y: 0, z: 0}
+  scanSpeed:
+    m_OverrideState: 1
+    m_Value: 1.36
+  scanDist:
+    m_OverrideState: 1
+    m_Value: 1.2
+  scanWidth:
+    m_OverrideState: 1
+    m_Value: 2.62
+  overlayRampTex:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 32dd115bed46a474ab32a88684606180, type: 3}
+  overlayColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.839927, g: 0.9528302, b: 0.12135102, a: 1}
 --- !u!114 &8315533396769451122
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -77,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff5de4b2c164413b45edcb3f73def57, type: 3}
   m_Name: CustomEffectComponent
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.128
+    m_Value: 0.258

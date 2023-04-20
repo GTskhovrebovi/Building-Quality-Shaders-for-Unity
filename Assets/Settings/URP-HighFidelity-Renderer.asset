@@ -155,7 +155,8 @@ MonoBehaviour:
   - {fileID: 2201432755299598041}
   - {fileID: -9074929002364276315}
   - {fileID: -2957262352581932045}
-  m_RendererFeatureMap: adc0de57c6d2eee5c9bb52dbbb24e50d75d6e7f1f3d316a8d9be8a606d0f8d1ea5f12f4427600f82f3cbb7fe8eb1f5d6
+  - {fileID: 8245837919341119811}
+  m_RendererFeatureMap: adc0de57c6d2eee5c9bb52dbbb24e50d75d6e7f1f3d316a8d9be8a606d0f8d1ea5f12f4427600f82f3cbb7fe8eb1f5d64309c639e6196f72
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -300,3 +301,18 @@ MonoBehaviour:
   m_Name: Grayscale
   m_EditorClassIdentifier: 
   m_Active: 0
+--- !u!114 &8245837919341119811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79290aa0079a418581294286b4948113, type: 3}
+  m_Name: World Scanner
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  material: {fileID: 2100000, guid: 46532ed23bbca7141918b58d26d5cb1c, type: 2}
+  renderPassEvent: 550
